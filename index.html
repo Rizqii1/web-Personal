@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mochamad Rizqi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Rizqi</div>
+            <div class="nav-links">
+                <a data-section="home" class="active">Home</a>
+                <a data-section="about">About</a>
+                <a data-section="certificates">Certificates</a>
+                <a data-section="projects">Projects</a>
+                <a data-section="skills">Skills</a>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <div class="hologram-container">
+                    <div class="hero-content">
+                        <h1>Hi, I'm Rizqi</h1>
+                        <h2>I'M A
+                            <span class="typewriter-text"></span>
+                        </h2>
+                        <p>Aspiring Data Scientist and Machine Learning Specialist focused on using data to drive impactful change. Skilled in Python and machine learning, with experience in data pre-processing, predictive modeling, and deployment. Proficient in data visualization tools such as Tableau and Looker Studio to uncover meaningful insights.</p>
+                        <a href="Mochamad Rizqi - Cv.pdf" download class="btn">Download CV</a>
+                        <div class="social-links">
+                            <a href="https://github.com/Rizqii1" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mochamad-rizqi/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:mochamadrizqii1.com"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="profile-image">
+                        <div class="profile-circle">
+                            <img src="img/Rizqi.jpg" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+           <!-- About Section -->
+<section id="about" class="content-section">
+    <div class="hologram-container">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Early Journey</h3>
+                <p>Started exploring data analytics and coding through Python, SQL, and visualization tools.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Education</h3>
+                <p>Computer Science degree with focus on Data Science and Machine Learning..</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Current Focus</h3>
+                <p>Working on real-world data projects, building insightful dashboards, and optimizing business decisions with data-driven strategies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificate Section -->
+<section id="certificates" class="content-section">
+    <div class="hologram-container">
+        <h2>Certificates</h2>
+        <div class="certificates-grid">
+            <!-- Certificate 1: Data Science Batch 48 -->
+            <div class="certificate-card">
+                <img src="img/certificate_data_science.jpg" alt="Certificate Data Science">
+                <h3>Data Science Batch 48</h3>
+                <p>Machine Learning & Data Science Excellence</p>
+            </div>
+
+            <!-- Certificate 2: Home Credit Internship -->
+            <div class="certificate-card">
+                <img src="img/certificate_home_credit.jpg" alt="Certificate Home Credit">
+                <h3>Home Credit Internship</h3>
+                <p>Data Scientist Project-Based Internship</p>
+            </div>
+
+            <!-- Certificate 3: Kimia Farma Internship -->
+            <div class="certificate-card">
+                <img src="img/certificate_pbi_kimia_farma.jpg" alt="Certificate PBI Kimia Farma">
+                <h3>Kimia Farma Internship</h3>
+                <p>Big Data Analytics Project-Based Internship</p>
+            </div>
+
+            <!-- Certificate 4: Data Visualization (Slider) -->
+            <div class="certificate-card">
+                <img id="dataVisualCert" src="img/certificate_data_visual_1.jpg" alt="Certificate Data Visualization">
+                <h3>Data Visualization</h3>
+                <p>Power BI & Looker Studio for Data Analysts</p>
+
+            </div>
+
+            <!-- Certificate 5: SQL (Slider) -->
+            <div class="certificate-card">
+                <img id="sqlCert" src="img/certificate_sql_1.jpg" alt="Certificate SQL">
+                <h3>SQL for Data Analysts</h3>
+                <p>SQL Querying, ERD, and Data Modeling</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function changeImage(id, img1, img2) {
+        let imgElement = document.getElementById(id);
+        imgElement.src = (imgElement.src.includes(img1)) ? img2 : img1;
+    }
+</script>
+
+            
+
+
+         <!-- Projects Section -->
+<section id="projects" class="content-section">
+    <div class="hologram-container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Credit Scoring Home Credit</h3>
+                <p>Developed a credit scoring model using machine learning techniques to assess loan eligibility.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Jupyter Notebook</span>
+                    <span>Machine Learning</span>
+                </div>
+                <a href="https://github.com/Rizqii1/Credit-Scoring-Home-Credit" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>EDA Superstore</h3>
+                <p>Performed Exploratory Data Analysis (EDA) on Superstore sales data to identify trends and business insights.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Jupyter Notebook</span>
+                    <span>Data Visualization</span>
+                </div>
+                <a href="https://github.com/Rizqii1/EDA-Superstore" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>EDA Game</h3>
+                <p>Analyzed gaming industry data to uncover key market trends and player behaviors.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Jupyter Notebook</span>
+                    <span>Data Analysis</span>
+                </div>
+                <a href="https://github.com/Rizqii1/EDA-Game" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <h3>Dashboard Retail FMCG</h3>
+                <p>Built a Tableau dashboard to visualize sales performance and operational insights for the FMCG sector.</p>
+                <div class="tech-stack">
+                    <span>Tableau</span>
+                    <span>Data Visualization</span>
+                    <span>Business Intelligence</span>
+                </div>
+                <a href="https://github.com/Rizqii1/Dashboard-Retail-FMCG" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <h3>Dashboard Performance Kimia Farma</h3>
+                <p>Developed a business performance dashboard for Kimia Farma, tracking key performance metrics.</p>
+                <div class="tech-stack">
+                    <span>LookerStudio</span>
+                    <span>Business Intelligence</span>
+                    <span>Data Analytics</span>
+                </div>
+                <a href="https://github.com/Rizqii1/Dashboard-Perfomance-Kimia-Farma" class="btn">View on GitHub</a>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <h3>Dashboard Supermarket Sales</h3>
+                <p>Created a Power BI dashboard for supermarket sales analysis to optimize business strategies.</p>
+                <div class="tech-stack">
+                    <span>Power BI</span>
+                    <span>Data Visualization</span>
+                    <span>Sales Analytics</span>
+                </div>
+                <a href="https://github.com/Rizqii1/Dashboard-Supermarket-Sales-Power-BI" class="btn">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Skills Section -->
+<section id="skills" class="content-section">
+    <div class="hologram-container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <!-- Data Analysis -->
+            <div class="skill-category">
+                <h3>Data Analysis & Visualization</h3>
+                <ul class="skill-list">
+                    <li>SQL (BigQuery, PostgreSQL)</li>
+                    <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li>
+                    <li>Tableau & Looker Studio</li>
+                    <li>Power BI</li>
+                </ul>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="skill-category">
+                <h3>Machine Learning</h3>
+                <ul class="skill-list">
+                    <li>Scikit-Learn & TensorFlow</li>
+                    <li>Predictive Modeling</li>
+                    <li>NLP & Sentiment Analysis</li>
+                </ul>
+            </div>
+
+            <!-- Business Intelligence -->
+            <div class="skill-category">
+                <h3>Business & Data Strategy</h3>
+                <ul class="skill-list">
+                    <li>Cost Analysis</li>
+                    <li>Performance Monitoring</li>
+                    <li>Data-Driven Decision Making</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
