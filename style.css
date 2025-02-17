@@ -388,6 +388,14 @@ nav {
     transform: scale(1.05);
 }
 
+.project-card img {
+    width: 100%;
+    height: 160px; /* Ukuran gambar seragam */
+    object-fit: contain; /* Pastikan gambar tidak terpotong */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 
 /* Skills Section */
 .skills-container {
