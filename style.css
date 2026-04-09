@@ -246,24 +246,36 @@ nav {
 
 
 /* Certificate Cards */
+/* SECTION CENTER */
+#certificates {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTAINER */
+.hologram-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* TITLE */
 #certificates h2 {
     text-align: center;
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: 40px;
-    letter-spacing: 1px;
 }
+
+/* GRID */
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    width: 95%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
+/* CARD */
 .certificate-card {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid var(--primary);
@@ -272,14 +284,16 @@ nav {
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: 0.3s;
 }
 
+/* HOVER */
 .certificate-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0,255,255,0.2);
 }
 
+/* IMAGE */
 .certificate-card img {
     width: 100%;
     aspect-ratio: 16 / 10;
@@ -289,31 +303,31 @@ nav {
     margin-bottom: 20px;
 }
 
+/* TITLE CARD */
 .certificate-card h3 {
     color: var(--primary);
-    font-size: 1.1rem;
-    margin-bottom: 10px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
+/* TEXT */
 .certificate-card p {
     flex-grow: 1;
     text-align: center;
 }
 
+/* BUTTON */
 .certificate-card a {
     display: block;
     text-align: center;
-    padding: 10px 15px;
-    background-color: var(--primary);
+    padding: 10px;
+    background: var(--primary);
     color: var(--dark);
-    text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    font-size: 0.9rem;
     margin-top: auto;
+    text-decoration: none;
 }
-
 @media (max-width: 768px) {
     .certificates-grid {
         grid-template-columns: 1fr; 
