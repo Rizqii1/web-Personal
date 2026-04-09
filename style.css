@@ -249,37 +249,35 @@ nav {
 
 .certificates-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;  
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     width: 95%;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
     box-sizing: border-box;
 }
 
-section, .container { 
-    width: 100% !important;
-    overflow: visible !important;
-}
-
 .certificate-card {
-    background: rgba(0, 255, 255, 0.05); /* Pastikan background tetap ada */
+    background: rgba(0, 255, 255, 0.05);
     border: 1px solid var(--primary);
     border-radius: 12px;
-    padding: 25px; /* Tambah padding dalam agar konten tidak sesak */
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Sangat penting agar tinggi kartu sama rata */
+    height: 100%;
     transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,255,255,0.2);
 }
 
 .certificate-card img {
     width: 100%;
-    /* Gunakan aspect-ratio 4/3 atau 16/10 agar gambar sertifikat pas */
-    aspect-ratio: 16 / 10; 
-    object-fit: contain; 
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
     background: rgba(0,0,0,0.3);
     border-radius: 8px;
     margin-bottom: 20px;
@@ -293,10 +291,8 @@ section, .container {
 }
 
 .certificate-card p {
-    flex-grow: 1; /
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .certificate-card a {
@@ -309,7 +305,7 @@ section, .container {
     border-radius: 6px;
     font-weight: bold;
     font-size: 0.9rem;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 @media (max-width: 768px) {
