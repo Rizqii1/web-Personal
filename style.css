@@ -249,59 +249,66 @@ nav {
 
 .certificates-grid {
     display: grid;
-    /* KUNCI: auto-fill akan membuat kartu berjajar ke samping selama ruang cukup */
-    /* 300px adalah ukuran 'kotak kecil' yang ideal */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-    gap: 20px;
-    width: 90%;
-    max-width: 1100px; /* Batasi lebar area grid agar tidak terlalu melebar ke pinggir layar */
+    /* KUNCI: repeat(2, 1fr) memaksa grid membagi 2 kolom sama besar */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px; /* Jarak antar kartu lebih pas */
+    width: 100%;
+    max-width: 900px; /* Batasi lebar area agar kartu tidak jadi raksasa */
     margin: 40px auto;
-    justify-content: center; /* Agar grid tetap di tengah */
+    padding: 0 20px;
 }
 
 .certificate-card {
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid var(--primary);
     border-radius: 12px;
-    padding: 15px; /* Kurangi padding agar lebih compact */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
-    height: auto; /* Biar tinggi kotak mengikuti isi */
+    height: 100%; /* Agar tinggi kartu kiri & kanan selalu sama sejajar */
     box-sizing: border-box;
 }
 
 .certificate-card img {
     width: 100%;
-    /* Gunakan aspect-ratio agar gambar seragam dan tidak terlalu tinggi */
+    /* Aspect ratio 16/10 cocok untuk bentuk sertifikat landscape */
     aspect-ratio: 16 / 10; 
-    object-fit: cover;
+    object-fit: contain; /* Agar gambar tidak terpotong */
+    background: rgba(0,0,0,0.2);
     border-radius: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .certificate-card h3 {
     color: var(--primary);
-    font-size: 1rem; /* Ukuran teks lebih kecil */
-    margin-bottom: 8px;
-    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .certificate-card p {
     color: #ccc;
-    font-size: 0.85rem;
-    margin-bottom: 15px;
-    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .certificate-card a {
+    display: block;
     text-align: center;
-    padding: 8px 12px;
+    padding: 10px 15px;
+    background-color: var(--primary);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
     font-size: 0.9rem;
-    margin-top: auto; /* Paksa tombol ke bawah kartu */
+    margin-top: auto; /* Tombol otomatis nempel di paling bawah kartu */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .certificates-grid {
         grid-template-columns: 1fr; 
     }
