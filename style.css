@@ -246,7 +246,13 @@ nav {
 
 
 /* Certificate Cards */
-
+#certificates h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
