@@ -248,14 +248,19 @@ nav {
 /* Certificate Cards */
 
 .certificates-grid {
-    display: grid;
-    /* KUNCI: repeat(2, 1fr) memaksa grid membagi 2 kolom sama besar */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 25px; /* Jarak antar kartu lebih pas */
+    display: grid !important; /* Paksa menggunakan grid */
+    grid-template-columns: repeat(2, 1fr) !important; /* Paksa bagi 2 kolom */
+    gap: 20px;
     width: 100%;
-    max-width: 900px; /* Batasi lebar area agar kartu tidak jadi raksasa */
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
+    box-sizing: border-box;
+}
+
+section, .container { 
+    width: 100% !important;
+    overflow: visible !important;
 }
 
 .certificate-card {
