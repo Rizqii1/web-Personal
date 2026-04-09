@@ -248,30 +248,23 @@ nav {
 /* Certificate Cards */
 
 .certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); 
-    gap: 25px; 
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 20px;
- 
-    justify-content: center; 
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px; /* Atur lebar maksimal area sertifikat */
+    margin: 40px auto; 
+    align-items: start;
 }
 
 .certificate-card {
+  background: rgba(0, 255, 255, 0.05);
     border: 1px solid var(--primary);
+    border-radius: 12px;
     padding: 20px;
-    background: rgba(0, 255, 255, 0.05);
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.1);
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; 
-    height: auto; 
-    width: 100%;
+    transition: all 0.3s ease;
+    height: 100%; /* Biar tinggi kotak sama dalam satu baris */
 }
 
 .certificate-card:hover {
@@ -280,19 +273,18 @@ nav {
 }
 
 .certificate-card img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover; 
-    border-radius: 5px;
+width: 100%;
+    aspect-ratio: 4 / 3; /* Memaksa semua gambar punya ukuran kotak yang sama */
+    object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 15px;
-    background: rgba(0,0,0,0.2);
 }
 
 .certificate-card h3 {
-    color: var(--primary);
-    margin-bottom: 8px;
-    font-size: 18px; 
-    transition: text-shadow 0.3s ease;
+ color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    min-height: 45px; /* Biar judul yang panjang gak ngerusak tinggi kotak */
 }
 
 .certificate-card h3:hover {
@@ -300,11 +292,10 @@ nav {
 }
 
 .certificate-card p {
-    color: var(--gray);
-    font-size: 14px;
-    margin-bottom: 20px; 
-    flex-grow: 0; 
-    text-align: center; 
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
 }
 
 .certificate-card a {
