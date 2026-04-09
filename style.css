@@ -86,16 +86,13 @@ nav {
 
 .hologram-container {
     position: relative;
-    /* border: 2px dotted var(--primary); */
     background: rgba(0, 255, 255, 0.05);
     padding: 5%;
-    margin: 20px 0;
+    margin: 20px auto;
     overflow: hidden;
     animation: hologramFlicker 2s infinite;
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    max-width: 1200px;
+    display: block;
 }
 
 .hologram-container::before {
@@ -124,6 +121,13 @@ nav {
     border: 1px solid rgba(0, 255, 255, 0.3);
     pointer-events: none;
 }  
+
+.hero .hologram-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
 
 /* Content Sections */
 .content-section {
@@ -256,7 +260,7 @@ nav {
 .hologram-container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
 }
 
