@@ -266,9 +266,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 280px; /* Pastikan tinggi kartu seragam */
+    justify-content: flex-start; 
+    height: auto; 
 }
 
 .certificate-card:hover {
@@ -278,16 +277,17 @@ nav {
 
 .certificate-card img {
     width: 100%;
-    height: 160px; /* Ukuran gambar seragam */
-    object-fit: contain; /* Pastikan gambar tidak terpotong */
+    height: auto; 
+    max-height: 180px; 
+    object-fit: contain;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .certificate-card h3 {
     color: var(--primary);
     margin-bottom: 8px;
-    font-size: 18px; /* Ukuran proporsional */
+    font-size: 18px; 
     transition: text-shadow 0.3s ease;
 }
 
@@ -298,9 +298,9 @@ nav {
 .certificate-card p {
     color: var(--gray);
     font-size: 14px;
-    margin-bottom: 10px;
-    flex-grow: 1; /* Biar teks menyesuaikan dan tombol tetap di bawah */
-    text-align: justify; /* Agar teks lebih rapi */
+    margin-bottom: 15px;
+    flex-grow: 0; 
+    text-align: center; 
 }
 
 .certificate-card a {
