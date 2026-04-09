@@ -248,13 +248,13 @@ nav {
 /* Certificate Cards */
 
 .certificates-grid {
-    display: grid !important; /* Paksa menggunakan grid */
-    grid-template-columns: repeat(2, 1fr) !important; /* Paksa bagi 2 kolom */
-    gap: 20px;
-    width: 100%;
-    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 30px; 
+    width: 95%;
+    max-width: 1200px; 
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -264,25 +264,25 @@ section, .container {
 }
 
 .certificate-card {
-    background: rgba(0, 255, 255, 0.05);
+    background: rgba(0, 255, 255, 0.05); /* Pastikan background tetap ada */
     border: 1px solid var(--primary);
     border-radius: 12px;
-    padding: 20px;
+    padding: 25px; /* Tambah padding dalam agar konten tidak sesak */
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
-    height: 100%; /* Agar tinggi kartu kiri & kanan selalu sama sejajar */
-    box-sizing: border-box;
+    justify-content: space-between;
+    height: 100%; /* Sangat penting agar tinggi kartu sama rata */
+    transition: transform 0.3s ease;
 }
 
 .certificate-card img {
     width: 100%;
-    /* Aspect ratio 16/10 cocok untuk bentuk sertifikat landscape */
+    /* Gunakan aspect-ratio 4/3 atau 16/10 agar gambar sertifikat pas */
     aspect-ratio: 16 / 10; 
-    object-fit: contain; /* Agar gambar tidak terpotong */
-    background: rgba(0,0,0,0.2);
+    object-fit: contain; 
+    background: rgba(0,0,0,0.3);
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .certificate-card h3 {
@@ -293,11 +293,10 @@ section, .container {
 }
 
 .certificate-card p {
-    color: #ccc;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    text-align: center;
+    flex-grow: 1; /
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .certificate-card a {
@@ -310,7 +309,7 @@ section, .container {
     border-radius: 6px;
     font-weight: bold;
     font-size: 0.9rem;
-    margin-top: auto; /* Tombol otomatis nempel di paling bawah kartu */
+    margin-top: auto; 
 }
 
 @media (max-width: 768px) {
